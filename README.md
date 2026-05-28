@@ -6,7 +6,7 @@
 
 1. RegOpenKeyExA / RegQueryValueExA
 Открывает ветку реестра HKEY_CURRENT_USER\Software\wiXEjablA1 и читает значение 6pZhi.
-Скорее всего, там хранятся входные данные (пароль/флаг), введённые пользователем.
+Скорее всего, там хранятся входные данные (пароль/флаг)
 2. sub_4017D2
 <img width="1042" height="359" alt="image" src="https://github.com/user-attachments/assets/5ec3ce41-2af8-4a3d-af88-a47dd1a28a1f" />
 она там очень большая и длинная
