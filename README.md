@@ -1,4 +1,4 @@
-<img width="754" height="760" alt="image" src="https://github.com/user-attachments/assets/8d4e1f18-5523-414f-80e1-4875adbffd2b" />### Задания к экзамену/ознакомительной практике
+### Задания к экзамену/ознакомительной практике
 
 ## 1 задание CrackMe 11.exe
 
