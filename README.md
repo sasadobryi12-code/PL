@@ -4,6 +4,81 @@
 
 <img width="1156" height="115" alt="image" src="https://github.com/user-attachments/assets/5f0fd9a3-b412-43bb-8576-162f9f5f4cef" />
 
+#Начальный код
+```c
+int __cdecl main(int argc, const char **argv, const char **envp)
+{
+  char *v4; // [rsp+38h] [rbp-48h]
+  char v5[248]; // [rsp+40h] [rbp-40h] BYREF
+  int v6; // [rsp+138h] [rbp+B8h]
+  __int16 v7; // [rsp+13Ch] [rbp+BCh]
+  char v8; // [rsp+13Eh] [rbp+BEh]
+  LPBYTE lpData; // [rsp+148h] [rbp+C8h]
+  DWORD cbData; // [rsp+150h] [rbp+D0h] BYREF
+  DWORD Type; // [rsp+154h] [rbp+D4h] BYREF
+  HKEY hKey; // [rsp+158h] [rbp+D8h] BYREF
+  int i; // [rsp+160h] [rbp+E0h]
+  char v14; // [rsp+167h] [rbp+E7h]
+  int v15; // [rsp+168h] [rbp+E8h]
+  int v16; // [rsp+16Ch] [rbp+ECh]
+
+  sub_4021C0(argc, argv, envp);
+  memset(v5, 0, sizeof(v5));
+  v6 = 0;
+  v7 = 0;
+  v8 = 0;
+  v16 = 0;
+  v15 = 0;
+  v14 = 1;
+  if ( RegOpenKeyExA(HKEY_CURRENT_USER, "Software\\wiXEjablA1", 0, 1u, &hKey) )
+  {
+    MessageBoxA(0i64, "MeZTHBvQwPLA", "NO !", 0);
+    sub_4017BB();
+  }
+  if ( RegQueryValueExA(hKey, "6pZhi", 0i64, &Type, 0i64, &cbData) )
+    sub_4017BB();
+  lpData = (LPBYTE)operator new[](cbData);
+  v4 = (char *)operator new[](2 * cbData);
+  memset(v4, 0, 2 * cbData);
+  if ( RegQueryValueExA(hKey, "6pZhi", 0i64, &Type, lpData, &cbData) )
+  {
+    RegCloseKey(hKey);
+    operator delete(lpData, 1ui64);
+  }
+  sub_4017D2(lpData, cbData - 1, v4);
+  sub_401706(0i64, v5, byte_404020);
+  while ( byte_404020[v16] )
+    ++v16;
+  while ( v4[v15] )
+    ++v15;
+  if ( v16 == v15 )
+  {
+    for ( i = 0; i < v15; ++i )
+    {
+      if ( byte_404020[i] != v4[i] )
+      {
+        v14 = 0;
+        break;
+      }
+    }
+  }
+  else
+  {
+    v14 = 0;
+  }
+  if ( !v14 )
+  {
+    RegCloseKey(hKey);
+    operator delete(lpData, 1ui64);
+    operator delete(v4, 1ui64);
+    sub_4017BB();
+  }
+  MessageBoxA(0i64, (LPCSTR)lpData, "FLAG", 0);
+  operator delete(lpData, 1ui64);
+  operator delete(v4, 1ui64);
+  return 0;
+}
+```
 1. RegOpenKeyExA / RegQueryValueExA
 Открывает ветку реестра HKEY_CURRENT_USER\Software\wiXEjablA1 и читает значение 6pZhi.
 Скорее всего, там хранятся входные данные (пароль/флаг)
