@@ -7,7 +7,13 @@
 Основной код располагается тут(sub_4017BD):
 <img width="818" height="908" alt="image" src="https://github.com/user-attachments/assets/af23c3e4-5581-4e2b-bcdc-85618de63281" />
 
-
+#Ожидаемый формат:
+Строка из 32 шестнадцатеричных символов (0-9, A-F, a-f)
+Дефис после каждых 8 символов
+Пример: XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX
+Проверка:
+Цикл по 32 hex-символам, дефисы на позициях 8, 17, 26
+При нарушении — переход к ошибке
 
 <img width="856" height="616" alt="image" src="https://github.com/user-attachments/assets/fe5e6d72-90b4-4da4-b82a-9500356880dc" />
 
