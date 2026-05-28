@@ -36,3 +36,12 @@
 ### Математическая формула
 ### Для одного бита:
 ### result_bit = (a2_bit & ~a1_bit) | (a1_bit & ~a2_bit) = a1_bit XOR a2_bit
+
+<img width="931" height="149" alt="image" src="https://github.com/user-attachments/assets/216f0719-444b-4014-88f6-0e6d2015e5b1" />
+### Если все совпадает он выдает "Activation complited !", "GOOD_JOB"
+### Если нет, значит что-то неправильно
+
+
+<img width="842" height="493" alt="image" src="https://github.com/user-attachments/assets/7490ab17-c40f-4cc7-b0ac-56f2ac4b8d26" />
+
+### Flag: 6CBF8091-E61B300E--EDEFCEC-00000801
